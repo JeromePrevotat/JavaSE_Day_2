@@ -1,8 +1,5 @@
 package com.humanbooster.exercices;
 
-import java.lang.classfile.Signature;
-import java.lang.classfile.instruction.ThrowInstruction;
-
 public class Personne {
     /**
      * Personne is composed of 2 Strings <nom> & <prenom> which can't be empty and an Integer <age> which must be Positive.
