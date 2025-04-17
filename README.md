@@ -1,1 +1,3 @@
-# JavaSE_Day_2
+# JavaSE_Day_1
+Formation Human Booster
+Jerome Prevotat
