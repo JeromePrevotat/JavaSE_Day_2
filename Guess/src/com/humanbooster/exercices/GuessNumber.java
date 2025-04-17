@@ -1,7 +1,7 @@
 package com.humanbooster.exercices;
 
 import java.util.Scanner;
-import java.lang.Math;
+import java.util.Random;
 import java.util.ArrayList;
 
 public class GuessNumber {
@@ -9,6 +9,8 @@ public class GuessNumber {
     public int toFind;
     public ArrayList<Integer> guesses;
     public int MAX_ATTEMPS;
+    private static final int MIN = 1;
+    private static final int MAX = 100;
 
     public GuessNumber(int maxAttempts){
            this.guesses = new ArrayList<Integer>();
@@ -18,7 +20,8 @@ public class GuessNumber {
     }
 
     public int genNumber(){
-        return (int) ((Math.random() * 100) + 1);
+        Random rng = new Random();
+        return this.toFind = rng.nextInt(MAX - MIN + 1);
     }
 
     public String replay(){
