@@ -13,7 +13,12 @@ public class Personne {
      */
     public static int nbPersonne;
 
-    public Personne(){nbPersonne++;}
+    public Personne(){
+        this.nom = "";
+        this.prenom = "";
+        this.age = 0;
+        nbPersonne++;
+    }
 
     public Personne(String nom, String prenom, int age) throws Exception{
         if ((nom == null) || nom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <nom>: can't be empty");

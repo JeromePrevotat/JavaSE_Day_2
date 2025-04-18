@@ -31,7 +31,7 @@ public class App {
         Personne[] p = new Personne[5];
         try {
             p[0] = new Personne();
-            p[1] = new Personne("","test",1);
+            // p[1] = new Personne("","test",1);
             //p[2] = new Personne("test", "", 1);
             //p[3] = new Personne("test", "test", -1);
             p[4] = new Personne("Je suis", "né à", 40);            
@@ -39,6 +39,6 @@ public class App {
             System.err.println("Error: " + e.getMessage());
             return;
         }
-        System.out.println(p[4].toString());
+        System.out.println(p[0].toString());
     }
 }
