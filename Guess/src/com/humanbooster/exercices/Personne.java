@@ -16,8 +16,9 @@ public class Personne {
     public Personne(){nbPersonne++;}
 
     public Personne(String nom, String prenom, int age) throws Exception{
-        if (nom.trim().equals("") || prenom.trim().equals("")) throw new Exception("Invalid value for <nom> or <prenom>: can't be empty");
-        if (age < 0) throw new Exception("Invalid value for <age>: can't be negative");
+        if ((nom == null) || nom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <nom>: can't be empty");
+        if ((prenom == null) || prenom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <prenom>: can't be empty");
+        if (age < 0) throw new IllegalArgumentException("Invalid value for <age>: can't be negative");
         this.nom = nom;
         this.prenom = prenom;
         this.age = age;
@@ -55,7 +56,7 @@ public class Personne {
      * @param nom Takes a String : the Personne's lastname. Cannot be Empty.
      */
     public void setNom(String nom) throws Exception{
-        if (nom.trim().equals("")) throw new Exception("Invalid value for <nom>: can't be empty");
+        if (nom == null || nom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <nom>: can't be empty");
         this.nom = nom;
     }
 
@@ -64,7 +65,7 @@ public class Personne {
      * @param prenom Takes a String : the Personne's name. Cannot be Empty.
      */
     public void setPrenom(String prenom) throws Exception{
-        if (prenom.trim().equals("")) throw new Exception("Invalid value for <prenom>: can't be empty");
+        if (prenom == null || prenom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <prenom>: can't be empty");
         this.prenom = prenom;
     }
 
@@ -73,7 +74,7 @@ public class Personne {
      * @param age Takes an Integer : the Personne's age. Must be Positive.
      */
     public void setAge(int age) throws Exception{
-        if (age < 0) throw new Exception("Invalid value for <age>: can't be negative");
+        if (age < 0) throw new IllegalArgumentException("Invalid value for <age>: can't be negative");
         this.age = age;
     }
 
