@@ -19,8 +19,8 @@ public class Personne {
         if ((nom == null) || nom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <nom>: can't be empty");
         if ((prenom == null) || prenom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <prenom>: can't be empty");
         if (age < 0) throw new IllegalArgumentException("Invalid value for <age>: can't be negative");
-        this.nom = nom;
-        this.prenom = prenom;
+        this.nom = nom.trim();
+        this.prenom = prenom.trim();
         this.age = age;
         nbPersonne++;
     }
@@ -57,7 +57,7 @@ public class Personne {
      */
     public void setNom(String nom) throws Exception{
         if (nom == null || nom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <nom>: can't be empty");
-        this.nom = nom;
+        this.nom = nom.trim();
     }
 
     /**
@@ -66,7 +66,7 @@ public class Personne {
      */
     public void setPrenom(String prenom) throws Exception{
         if (prenom == null || prenom.trim().equals("")) throw new IllegalArgumentException("Invalid value for <prenom>: can't be empty");
-        this.prenom = prenom;
+        this.prenom = prenom.trim();
     }
 
     /**
