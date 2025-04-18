@@ -11,7 +11,7 @@ public class Personne {
     /**
      * Number of Instances 
      */
-    public static int nbPersonne;
+    private static int nbPersonne;
 
     public Personne(){
         this.nom = "";
@@ -88,7 +88,7 @@ public class Personne {
      * Returns the number of Personne Instanced.
      * @return An Integer Positive or Nul.
      */
-    public static int getNbPersonne(){
+    public int getNbPersonne(){
         return nbPersonne;
     }
 
